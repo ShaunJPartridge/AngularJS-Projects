@@ -1,0 +1,17 @@
+{
+  
+  "name": "jsonserver",
+  "version": "1.0.0",
+  "description": "Fake REST API for new-app",
+  "main": "karma.conf.js",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "json-server": "^0.16.3"
+  },
+  "devDependencies": {}
+}
