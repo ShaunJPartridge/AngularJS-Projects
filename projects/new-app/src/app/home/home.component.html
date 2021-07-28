@@ -1,0 +1,51 @@
+<div class="user-detail" *ngIf="user">
+    <mat-card class="user-dashboard">
+        <mat-toolbar style="font-size:xx-large;">Welcome back, {{user.firstname}}!</mat-toolbar><br>
+        <mat-card-content>
+            <!--<mat-header style="font-size:xx-large;"> Welcome back, {{user.firstname}}!</mat-header>
+                <div class="user-field">
+                    {{ user.id }}
+                </div>
+                <div class="user-field">
+                    {{ user.email }}
+                </div>
+                <div class="user-field" style="display: flex;flex: 1 1 auto;">
+                    {{ user.password }}
+                </div>
+                <div class="user-field">
+                    {{ user.firstname }}
+                </div>
+                <div class="user-field">
+                    {{ user.lastname }}
+                </div>
+                <div class="user-field" style="flex: 1 1 auto;">
+                    {{ user.weight }}
+                </div>
+                <div class="user-field">
+                    {{ user.gender }}
+                </div>-->
+                <div *ngIf="user.routine" class="user-field" style="display: flex;">
+                    {{ user.routine['type'] }}
+                </div>
+                <!--<div class="user-field" *ngFor="let day of user.routine['workouts']">
+                    {{ day | json }}
+                </div>-->
+                <div *ngFor="let item of progMap | keyvalue" style="margin-left:700px;
+                position: relative; top: -30px; right: -70px;"> Progress towards {{item.key}} goal:
+                    <mat-progress-spinner
+                        class="example-margin"
+                        [color]="black"
+                        [mode]="mode"
+                        [value]="item.value"
+                        aria-label="completeness" style="display: flex; margin-top: 15px;margin-bottom: 5px;
+                        position:relative; left: 45px;" [diameter]="130">
+                    </mat-progress-spinner>
+                    <div *ngIf="item.value < 100" style="position:relative; left: 95px; top: -79px; font-size: large; color: rgb(67, 187, 67);"
+                    >{{item.value.toFixed(2)}} %</div>
+                    <div *ngIf="item.value == 100 || item.value > 100" style="position:relative; top: -79px; left: 100px; font-size: large; color: rgb(67, 187, 67);"
+                        >100 %</div>
+                </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<!--<app-navbar></app-navbar>-->

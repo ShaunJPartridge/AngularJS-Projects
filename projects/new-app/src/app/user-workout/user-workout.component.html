@@ -1,0 +1,41 @@
+<div *ngFor="let item of user.routine['workouts']">
+    <div *ngIf="item.day.includes(dateString.slice(0,3))">
+        <mat-card><mat-toolbar>{{item.day}}'s Workout</mat-toolbar><br>
+        <mat-table #table [dataSource]="item.workout" style="border: solid 1px black;">
+            <ng-container matColumnDef="Name">
+                <mat-header-cell *matHeaderCellDef>Exercise</mat-header-cell>
+                <mat-cell class="tc1" *matCellDef="let row">{{row.name}}
+                </mat-cell>      
+            </ng-container>
+            <ng-container matColumnDef="Sets">
+                <mat-header-cell *matHeaderCellDef>Sets</mat-header-cell>
+                <mat-cell class="tc2" *matCellDef="let row">
+                    <mat-form-field appearance="none" class="inputField">
+                        <input class="IN" matInput [(ngModel)]="row.sets" type="number" placeholder="{{row.sets}}">
+                    </mat-form-field>
+                </mat-cell>      
+            </ng-container>
+            <ng-container matColumnDef="Reps">
+                <mat-header-cell *matHeaderCellDef>Reps</mat-header-cell>
+                <mat-cell class="tc3" *matCellDef="let row">
+                    <mat-form-field appearance="none" class="inputField">
+                        <input class="IN" matInput [(ngModel)]="row.reps" type="number" placeholder="{{row.reps}}">
+                    </mat-form-field>
+                </mat-cell>      
+            </ng-container>
+            <ng-container matColumnDef="Weight">
+                <mat-header-cell *matHeaderCellDef>Weight</mat-header-cell>
+                <mat-cell class="tc4" *matCellDef="let row">
+                    <mat-form-field appearance="none" class="inputField">
+                        <span matSuffix style="margin-left: -138px;">lbs</span>
+                        <input class="IN" matInput [(ngModel)]="row.weight" type="number" placeholder="{{row.weight}}">
+                    </mat-form-field>
+                </mat-cell>      
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="colHeaders2"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: colHeaders2"></mat-row>
+        </mat-table>
+        <button mat-raised-button class="btn" (click)="logWorkout(item)">Log Workout</button>
+    </mat-card>
+    </div>
+</div>

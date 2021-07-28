@@ -1,0 +1,36 @@
+<div class="user-routine mat-elevation-z8" *ngIf="user">   
+    <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="Day">
+            <mat-header-cell style="background-color: rgb(67, 187, 67);" *matHeaderCellDef> Days </mat-header-cell>
+            <mat-cell style="font-size: 22px;" *matCellDef="let element"> {{element.day}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="Exercises">      
+            <mat-header-cell style="background-color: rgb(67, 187, 67);" *matHeaderCellDef> Workouts </mat-header-cell>
+            <mat-cell class="tb2" *matCellDef="let element2"> 
+                 <mat-table #table2 [dataSource]="element2.workout">
+                    <ng-container matColumnDef="Name">
+                        <mat-header-cell style="margin-left: -12px;" class="hc" *matHeaderCellDef> Exercise </mat-header-cell>
+                        <mat-cell style="margin-left: -11px; margin-right: 19px;" *matCellDef="let element2"> {{element2.name}}</mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="Sets">
+                        <mat-header-cell style="margin-left: 16px;" class="hc" *matHeaderCellDef> Sets </mat-header-cell>
+                        <mat-cell style="margin-right: 2px;" *matCellDef="let element2"> {{element2.sets}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="Reps">
+                        <mat-header-cell style="margin-left: -2px;" class="hc" *matHeaderCellDef> Reps </mat-header-cell>
+                        <mat-cell *matCellDef="let element2"> {{element2.reps}} </mat-cell>
+                    </ng-container>
+                    <ng-container matColumnDef="Weight">
+                        <mat-header-cell style="margin-left: -4px;" class="hc" *matHeaderCellDef> Weight </mat-header-cell>
+                        <mat-cell *matCellDef="let element2"> {{element2.weight}} </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="colHeaders2"></mat-header-row>
+                    <mat-row *matRowDef="let row2; columns: colHeaders2;"></mat-row>
+                 </mat-table>
+            </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="colHeaders1"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: colHeaders1;"></mat-row>
+    </mat-table>
+</div>
+
