@@ -3,4 +3,4 @@
 ### Table of Contents
 Title | Description |
 --- | --- |
-[myLifts](https://github.com/ShaunJPartridge/AngularJS-Projects/tree/master/projects/new-app) | A web-based fitness app |
+[myLifts](https://github.com/ShaunJPartridge/AngularJS-Projects/tree/master/projects/myLifts) | A web-based fitness app |
