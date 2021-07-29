@@ -1,0 +1,28 @@
+.spacer {
+    flex: 1 1 auto;
+}
+.mat-flat-button{
+    margin: 6px;
+    border:none;
+    font-size: 18px;
+}
+
+.title{
+    font-size: 35px;
+}
+
+.icon{
+    /**height: 50px;
+    font-size: 30px;
+    size: 60px;*/
+    transform: scale(2.5);
+    display: inline-flex;
+    vertical-align: top;
+    margin-right: 25px;
+    margin-left: 30px;
+    margin-top: 3px;
+}
+
+.mat-elevation-z6{
+    height: 90px;
+}

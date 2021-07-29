@@ -1,0 +1,79 @@
+/**.mat-table{
+    width: auto;
+}*/
+
+/**.mat-table td, th{
+    padding: 2px 10px;
+}*/
+
+.mat-header-row, .mat-row{
+    height: fit-content;
+}
+
+.addExbtn{
+    margin-left: 5px;
+    background-color: rgb(0, 183, 255);
+    color: black;
+}
+
+.btn{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 6px;
+    background-color: rgb(255, 196, 0); 
+}
+
+.mat-header-cell{
+    width: 100px;
+    font-size: 20px;
+}
+
+.mat-cell{
+    width: 105px;
+}
+
+.mat-column.Name{
+    width: 25%;
+    margin-left: -10px;
+}
+
+.mat-column.Sets{
+    width: 25%;
+}
+
+.mat-column.Reps{
+    width: 25%;
+}
+
+.mat-column.Weight{
+    width: 25%;
+}
+
+.hc{
+    font-size: 17px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.tb2{
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.inputField{
+    margin: 5px;
+    white-space: normal; /*was normal*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 90px;
+    margin-bottom: -10px;
+    margin-top: -5px;
+}
+
+.IN{
+    white-space: nowrap; /*was normal*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

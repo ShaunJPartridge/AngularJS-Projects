@@ -1,0 +1,31 @@
+.mat-header-cell{
+    width: 100px;
+    font-size: 20px;
+}
+
+.mat-cell{
+    width: 105px;
+}
+
+.mat-column.Name{
+    width: 25%;
+}
+
+.mat-column.Sets{
+    width: 25%;
+}
+
+.mat-column.Reps{
+    width: 25%;
+}
+
+.mat-column.Weight{
+    width: 25%;
+}
+
+.hc{
+    font-size: 17px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 10px;
+}

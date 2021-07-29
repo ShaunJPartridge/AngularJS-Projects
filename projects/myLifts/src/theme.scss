@@ -1,0 +1,19 @@
+// This file contains custom theme for app
+@import "../../../node_modules/@angular/material/theming";
+@include mat-core();
+
+$my-primary: mat-palette($mat-red,700);
+$my-accent: mat-palette($mat-blue, A400);
+
+// combine above variables into one
+$my-theme: mat-light-theme($my-primary,$my-accent);
+@include angular-material-theme($my-theme);
+
+.alternative{
+    $my-primary: mat-palette($mat-green,500);
+    $my-accent: mat-palette($mat-grey, 400);
+
+    // combine above variables into one
+    $my-theme: mat-light-theme($my-primary,$my-accent);
+    @include angular-material-theme($my-theme);
+}
